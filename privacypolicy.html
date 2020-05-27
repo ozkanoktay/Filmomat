@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+   <nav class="navbar bg-light navbar-expand-sm navbar-light fixed-top">
+        <div class="container">
+            <a href="project.html" class="navbar-brand font-weight-bold ">
+                <i class="fas fa-video fa-lg"></i>&nbsp;&nbsp;&nbsp;FilmoMat&nbsp;&nbsp;&nbsp;<i class="fas fa-film fa-lg"></i>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                   
+                   <li class="nav-item">
+                        <a href="questions.html" class="nav-link active">
+                            Test
+                        </a>
+                    </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            Genre
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                          <a class="dropdown-item" href="filmler.html">Action/Adventure</a>
+                            <a class="dropdown-item" href="filmler.html">Comedy</a>
+                            <a class="dropdown-item" href="filmler.html">Crime</a>
+                            <a class="dropdown-item" href="filmler.html">Drama</a>
+                            <a class="dropdown-item" href="filmler.html">Family/Kids</a>
+                            <a class="dropdown-item" href="filmler.html">Romance</a>
+                            <a class="dropdown-item" href="filmler.html">Fantasy</a>
+                            <a class="dropdown-item" href="filmler.html">Horror</a>
+                            <a class="dropdown-item" href="filmler.html">Documentary</a>
+
+
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="filmler.html">View all movies</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="filmler.html" class="nav-link active">
+                            New Films
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="filmler.html" class="nav-link active">
+                            Popular Films
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="filmler.html" class="nav-link active">
+                            Most Watched Films
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            More...
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                            <a class="dropdown-item" href="more.html">About Us</a>
+                            
+                            <a class="dropdown-item" href="privacypolicy.html">Privacy Policy</a>
+                            
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="signin.html" class="nav-link active">
+                            Sign In
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="createaccount.html" class="nav-link active">
+                            Sign Up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <header>
+
+        <div class="jumbotron bg-dark text-white">
+            <div class="container" style="align-content: center;">
+                <h2 style="text-align: center">Privacy Policy </h2>
+                <hr>
+                <hr>
+                <hr>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sint ratione eum qui quae, quas velit? Dolor cupiditate neque consequatur velit hic atque itaque laboriosam sed veritatis voluptas perspiciatis voluptatum illo reiciendis beatae sunt vel iste sint, natus aperiam illum. Deserunt, quasi aliquam labore, laboriosam omnis obcaecati iusto nisi perspiciatis provident? A ea officia atque culpa vel, quaerat quam incidunt assumenda eum voluptate vero dolore, blanditiis eos adipisci fuga deleniti fugiat quae rem inventore nobis reprehenderit dolorum? Quasi nobis maiores, ipsam accusamus exercitationem mollitia dolorum explicabo voluptatum minima odit praesentium minus magnam ipsa rerum ullam autem veniam consequuntur inventore nihil, temporibus amet! Voluptates dicta ratione hic harum laboriosam magnam vel, sequi magni temporibus debitis, perspiciatis quam facere aliquam, inventore eius recusandae qui dignissimos et corporis deserunt non cum! Quasi repellendus voluptates quae sint accusamus odit quia repellat assumenda ex voluptate quibusdam sunt pariatur esse perspiciatis et enim veniam tempore, illum sequi, alias libero ut quod error placeat unde. Sed, neque. Rem ab minima in omnis ipsa laborum adipisci, velit, tempora voluptates vel similique! Ratione cum fugiat fugit, sapiente voluptas sint facere.
+                </p>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facere dolore iste quam mollitia. Vel numquam architecto totam, autem dolore itaque quos, enim repellat provident in, nostrum possimus velit? Libero et dicta sit voluptatum, ab tempora quod pariatur quis dolores nisi veritatis dolore, rerum distinctio iste magni a voluptatem. Dolores id, possimus quaerat fugiat. Aut eaque harum voluptatibus ullam, error quaerat ipsam a voluptatem. Nam, beatae, quis reiciendis fuga provident repudiandae, deserunt inventore impedit corrupti voluptatum possimus doloremque nesciunt. Unde qui natus, laudantium vel illum modi alias earum, libero repudiandae officiis, explicabo. Possimus nesciunt id culpa cum, dicta inventore voluptatibus.
+                </p>
+
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab a rerum in quos fugiat eaque, excepturi laudantium assumenda, dicta. Eius vero sunt officia, aperiam a unde dolorem eum numquam odio voluptate? Non illum velit animi voluptatum nemo dolore incidunt, temporibus amet ex porro, sequi ab blanditiis ipsum quia ut necessitatibus nesciunt quaerat aut. Dicta laborum cumque voluptas mollitia aliquid accusantium incidunt fugit nesciunt provident porro animi aut veniam nihil obcaecati quos ab eligendi ratione magni laudantium, ipsa. Magni non praesentium officia placeat eligendi reiciendis vitae, reprehenderit, fuga aspernatur facilis libero ad temporibus inventore recusandae unde asperiores. Ex delectus, totam voluptates sapiente culpa! Debitis fuga architecto ad ea dicta ducimus dolorum nobis earum sequi placeat veritatis, amet vero accusamus officia perferendis impedit tempora, nostrum a pariatur quia totam distinctio adipisci. Illum architecto, rerum. Provident, debitis doloribus itaque, aut corporis velit nemo vero. Veritatis nostrum nobis blanditiis unde assumenda, iste provident nam eveniet ad voluptates, quod consectetur deserunt hic consequuntur reprehenderit libero! Ipsum officia laudantium tenetur quia nam, architecto recusandae enim incidunt fugit fugiat tempore beatae reiciendis molestias impedit magnam error quisquam nulla eligendi accusamus a blanditiis cupiditate suscipit? Id expedita voluptate quia dolores repellat blanditiis totam reiciendis assumenda similique, optio, magni!</p>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+
+
+
+    </main>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        Copyright © 2020 CE407
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
